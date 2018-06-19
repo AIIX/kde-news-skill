@@ -1,7 +1,7 @@
 {
   "utterance": "whats new at",
-  "intent_type": "GetLatestNews",
+  "intent_type": "WhatsNewAtKde",
   "intent": {
-    "GetLatestKeyword": "kde"
+    "WhatsNewKeyword": "kde"
   }
 }

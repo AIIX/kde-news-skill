@@ -1,0 +1,7 @@
+{
+  "utterance": "read article",
+  "intent_type": "GetArticleDesc",
+  "intent": {
+    "ArticleNumberKeyword": "read article one"
+  }
+}
