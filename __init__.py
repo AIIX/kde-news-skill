@@ -48,7 +48,8 @@ class KDENewsSkill(MycroftSkill):
             speakData = "Article {0}: {1}".format(str(index+1), item)
             self.speak(speakData)
         self.enclosure.ws.emit(Message("kdenewsObject", {'desktop': {'data': {'titlelist': articleList, 'urllist': articleUrlList, 'thumb': articleThumbList}}}))
-    
+        self.speak("If you would like me to read one of the above articles, say read article followed by the article number")
+        
     @intent_handler(IntentBuilder("GetArticleDesc").require("ArticleNumberKeyword").build())
     def handle_getarticledesc_intent(self, message):
         utterance = message.data.get('utterance').lower()
