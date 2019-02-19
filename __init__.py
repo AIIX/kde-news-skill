@@ -47,8 +47,8 @@ class KDENewsSkill(MycroftSkill):
         for index,item in enumerate(articleList):
             speakData = "Article {0}: {1}".format(str(index+1), item)
             self.speak(speakData)
-        self.enclosure.bus.emit(Message("kdenewsObject", {'desktop': {'data': {'titlelist': articleList, 'urllist': articleUrlList, 'thumb': articleThumbList}}}))
-        self.speak("If you would like me to read one of the above articles, say read article followed by the article number")
+        self.gui['kdenewsObject'] = data
+        self.gui.show_page("kderssfeed.qml")
         
     @intent_handler(IntentBuilder("GetArticleDesc").require("ArticleNumberKeyword").build())
     def handle_getarticledesc_intent(self, message):
